@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Recognition</title>
+</head>
+<body>
+    <h1>Upload an Image for Recognition</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" />
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- Display error messages -->
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <!-- Display labels if available -->
+    <% if (labels.length > 0) { %>
+        <h2>Detected Labels:</h2>
+        <ul>
+            <% labels.forEach(label => { %>
+                <li><%= label.Name %>: <%= label.Confidence.toFixed(2) %>%</li>
+            <% }); %>
+        </ul>
+    <% } %>
+</body>
+</html>
