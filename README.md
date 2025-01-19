@@ -1,6 +1,3 @@
-Here’s the complete `README.md` in a single code block:
-
-```markdown
 # Image Recognition App Using AWS Rekognition
 
 This project is a simple image recognition web application that uses **AWS Rekognition** to analyze uploaded images and identify labels (e.g., objects, scenes, and activities). Built with **Node.js** and **Express**, it provides an easy-to-use interface for exploring AWS Rekognition's powerful image analysis capabilities.
